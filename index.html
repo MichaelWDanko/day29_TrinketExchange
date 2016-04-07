@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Trinket Trader</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Trinket Trader</h1>
+        <h2>World renowned trinket trading</h2>
+    </header>
+    <main>
+        <button id="start-auto" class="auto">Start Auto-Trade</button>
+        <button id="stop-auto" class="auto">Stop Auto-Trade</button>
+        <h3>Golden trinkets</h3>
+        <p>Current price: <span id="exchange">-.--</span> coins</p>
+        <p>Auto-trade: <span id="auto-trade" class="off">Off</span></p>
+        <div class="controls">
+            <div class="button-wrapper">
+            <button id="buy">+ Buy</button>
+            <button id="sell">- Sell</button>
+            </div>
+            <div class="button-wrapper">
+            <button id="buy5">+ Buy 5</button>
+            <button id="sell5">- Sell 5</button>
+            </div>
+            <div class="button-wrapper">
+            <button id="buy10">+ Buy 10</button>
+            <button id="sell10">- Sell 10</button>
+            </div>
+            <!--
+            <button id="start-auto" class="auto">Start Auto-Trade</button>
+            <button id="stop-auto" class="auto">Stop Auto-Trade</button>
+-->
+        </div>
+        <div id="resources">
+            <h3>Wealth</h3>
+            <p>Coins: <span id="coin-wealth">---</span></p>
+            <p>Trinkets: <span id="trinket-wealth">---</span></p>
+            <p>Savings: <span id="savings-wealth">---</span></p>
+
+        </div>
+    </main>
+</body>
+
+</html>

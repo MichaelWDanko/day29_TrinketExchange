@@ -1,0 +1,26 @@
+{
+  "name": "trinket-exchange",
+  "version": "1.0.0",
+  "description": "A fully developed interface to trade on the TIY Exchange.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelWDanko/day29_TrinketExchange.git"
+  },
+  "author": "Michael Danko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelWDanko/day29_TrinketExchange/issues"
+  },
+  "homepage": "https://github.com/MichaelWDanko/day29_TrinketExchange#readme",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^2.2.0",
+    "underscore": "^1.8.3"
+  }
+}
