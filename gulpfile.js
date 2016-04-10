@@ -16,7 +16,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src('./js/app.js')
+  return gulp.src('./js/app.js')
         .pipe(browserify())
         .pipe(gulp.dest('./public/js'));
 });
@@ -25,4 +25,6 @@ gulp.task('watch', function () {
     gulp.watch('./*.html', ['html']);
     gulp.watch('./scss/*.scss', ['css']);
     gulp.watch('./js/*.js', ['js']);
+    gulp.watch('./js/models/*.js', ['js']);
+    gulp.watch('./js/views/*.js', ['js']);
 });
