@@ -3,13 +3,27 @@
 
 <head>
     <title>Trinket Trader</title>
+    <script type="text/template" id="transaction-template">
+        <div id="tranaction-event">
+            <p>
+                <&= qty &>
+            </p>
+            <p>
+                <&= price &>
+            </p>
+            <p>
+                <&= time &>
+            </p>
+        </div>
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="http://backbonejs.org/backbone-min.js"></script>
     <script src="js/app.js"></script>
+
 </head>
 
 <body>
@@ -19,13 +33,14 @@
     </header>
     <main>
         <div id="auto-wrapper">
-        <button id="start-auto" class="auto">Start Auto-Trade</button>
-        <button id="stop-auto" class="auto">Stop Auto-Trade</button>
-        <p>Auto-trade: <span id="auto-trade" class="off">Off</span></p>
+            <button id="start-auto" class="auto">Start Auto-Trade</button>
+            <button id="stop-auto" class="auto">Stop Auto-Trade</button>
+            <p>Auto-trade: <span id="auto-trade" class="off">Off</span></p>
         </div>
+
         <h3>Golden trinkets</h3>
         <p>Current price: <span id="exchange">-.--</span> coins</p>
-        
+
         <div class="controls" id="controls">
             <div class="button-wrapper">
                 <button id="buy">+ Buy</button>
@@ -39,10 +54,14 @@
                 <button id="buy10">+ Buy 10</button>
                 <button id="sell10">- Sell 10</button>
             </div>
-            <!--
-            <button id="start-auto" class="auto">Start Auto-Trade</button>
-            <button id="stop-auto" class="auto">Stop Auto-Trade</button>
--->
+        </div>
+        <div id="transaction-log">
+            <h3>Transaction Log</h3>
+            <div id="log">
+                <p>Qty:</p>
+                <p>Price</p>
+                <p>Time</p>
+            </div>
         </div>
         <div id="resources">
             <h3>Wealth</h3>

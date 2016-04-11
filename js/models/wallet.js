@@ -1,7 +1,9 @@
+/* jslint browser: true */
 module.exports = Backbone.Model.extend({
     /*Use initialize for functions, and default to declare varibles.*/
     initialize: function (fedRes) {
         fedRes.on('change:price', this.setPrice, this);
+        var transaction = _.template(document.getElementById('transaction-template'));
     },
     defaults: {
         coins: 500,
@@ -15,14 +17,19 @@ module.exports = Backbone.Model.extend({
         this.set('price', fedRes.get('price'));
 //        console.log('New price: ' + this.get('price'));
     },
-    buy: function (qty) {
+    buy: function (qty, transaction) {
+        var price = this.get('price');
         if (this.get('coins') >= (this.get('price') * qty)) {
             /*You have enough money*/
             this.set('coins', this.get('coins') - this.get('price') * qty);
             this.set('trinkets', this.get('trinkets') + qty);
             console.log(qty + 'Trinket bought');
-//            console.log('coins: ' + this.get('coins'));
-//            console.log('trinkets: ' + this.get('trinkets'));
+            
+            var html = transaction({
+                qty: qty,
+                price: price,
+                time: new Date().getTime(),
+            });
         } else {
             /*You do not have enough money*/
 //            console.log('Insufficient funds');
