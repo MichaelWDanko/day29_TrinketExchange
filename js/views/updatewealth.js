@@ -4,7 +4,7 @@ module.exports = Backbone.View.extend ({
       this.model.on('change', this.render, this);  
     },
     render: function () {
-        console.log(this.model.get('coins'));
+//        console.log(this.model.get('coins'));
       var coins = document.getElementById('coin-wealth');
       coins.textContent = this.model.get('coins');
        var trinkets = document.getElementById('trinket-wealth');

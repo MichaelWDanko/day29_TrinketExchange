@@ -14,10 +14,8 @@ module.exports = Backbone.Model.extend({
                 var data = JSON.parse(server.responseText);
 
                 self.set('price', Math.round((data.price * 100)/100));
-//                console.log('New price: ' + Math.round((data.price * 100)/100));
             };
             server.send();
-//           console.log(this.get('price')); 
         }
         refresh();
         setInterval(refresh, 3000);

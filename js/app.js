@@ -26,10 +26,6 @@ window.addEventListener('load', function () {
        model: pocket,
         el: document.getElementById('resources')
     });
-//    var auto = new Autotrade({
-//        model: pocket,
-//        el: document.getElementById('auto-wrapper')
-//    });
     
     function autoBuy() {
         if (pocket.get('price') <= 45) {
